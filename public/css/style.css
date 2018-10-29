@@ -1,4 +1,7 @@
 body {
-   background-image: url("./public/beer.jpg");
+   background-image: url("../beer.png");
+   background-opacity: 0.5;
+   background-size: 100%;
    background-color: #cccccc;
+
 }
