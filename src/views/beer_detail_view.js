@@ -17,9 +17,16 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   const description = this.createDetailListItem("Description", beer.description)
   detailsList.appendChild(description);
 
+  const firstBrewed = this.createDetailListItem("First Brewed:", beer.first_brewed)
+  detailsList.appendChild(firstBrewed);
+
   const image = document.createElement('IMG');
-  image.textContent = beer.image_url;
-  beerDetail.appendChild(image);
+  image.setAttribute('src',`${beer.image_url}`)
+  image.setAttribute('width', 60);
+  image.setAttribute('height', 150);
+
+  // image.textContent = `src`,`${beer.image_url}`;
+  detailsList.appendChild(image);
 
   beerDetail.appendChild(detailsList)
   return beerDetail;
